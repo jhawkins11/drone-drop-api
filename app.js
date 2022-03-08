@@ -53,6 +53,6 @@ app.post("/api/markers", (req, res) => {
   res.json(newMarker);
 });
 
-app.listen(9001, () => {
-  console.log("Node server started on port 9001.");
+app.listen(process.env.PORT || 9001, () => {
+  console.log("Listening.");
 });
