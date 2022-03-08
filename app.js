@@ -31,6 +31,10 @@ const loadMarkers = () => {
   }
 };
 
+app.get("/", function (req, res) {
+  res.send("<h1>Drone Delivery API</h1>");
+});
+
 app.get("/api/markers", (req, res) => {
   const markers = JSON.parse(loadMarkers());
   res.json(markers);
